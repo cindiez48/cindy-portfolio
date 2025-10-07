@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Cindy",
+  lastName: "Alfira",
+  name: "Cindy Alfira",
+  role: "Informatics Engineering Student",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "cindyalfira48@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Indonesian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -24,18 +24,14 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/cindiez48",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/cindyalfira",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
+
   {
     name: "Email",
     icon: "email",
@@ -65,7 +61,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Cindy, a engineering informatics student at Airlangga University {" "}
       <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
@@ -98,9 +94,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Cindy is a highly results-oriented student in the Informatics Engineering program at Universitas Airlangga.
+        She is driven by a passion for transforming complex technical challenges into efficient and elegant digital solutions. With a proven track record in project management and problem-solving,
+        she actively leverages cutting-edge technologies to enhance efficiency. 
+        She is currently seeking challenging roles to apply and develop her expertise at the intersection of Informatics and innovation.
       </>
     ),
   },
@@ -109,18 +106,19 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "freelance",
+        timeframe: "2023 - Present",
+        role: "Editing & Assignment Writing Services, Freelance ",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <span key="fly-uiux">
+            Provided editing services for papers, essays, and academic reports for students and learners.
+          </span>,
+          <span key="fly-uiux">
+            Edited and improved assignments from various disciplines, including humanities, social sciences, and computer science.
+          </span>,
+           <span key="fly-uiux">
+            Designed professional PowerPoint presentations for academic, business, and seminar projects with an engaging and informative visual design.
+          </span>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -132,22 +130,6 @@ const about: About = {
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
     ],
   },
   studies: {
@@ -155,12 +137,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Airlagga University",
+        description: <>Informatics engineering student.</>,
       },
     ],
   },
@@ -249,7 +227,7 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  title: `Photo gallery ${person.name}`,
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
