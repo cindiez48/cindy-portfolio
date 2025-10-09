@@ -31,11 +31,20 @@ const social: Social = [
     icon: "linkedin",
     link: "https://www.linkedin.com/in/cindyalfira",
   },
-
   {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
+  },
+  {
+    name: "Self-Introduction Video",
+    icon: "youtube",
+    link: "https://youtu.be/zbZNd_5yRB4?feature=shared",
+  },
+  {
+    name: "Resume",
+    icon: "file",
+    link: "/images/CV%20Cindy.pdf",
   },
 ];
 
@@ -46,31 +55,22 @@ const home: Home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
   subline: (
     <>
-      I'm Cindy, a engineering informatics student at Airlangga University {" "}
+      Hi! Welcome to my portfolio. I'm Cindy Alfira, a passionate Informatics Engineering Student at Universitas Airlangga, exploring the world of technology, design, and innovation.{" "}
       <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      , where I craft intuitive user experiences. After hours, I build my own projects.
     </>
   ),
+  featured: {
+    display: false,
+    title: undefined,
+    href: ""
+  }
 };
 
 const about: About = {
@@ -94,10 +94,41 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Cindy is a highly results-oriented student in the Informatics Engineering program at Universitas Airlangga.
-        She is driven by a passion for transforming complex technical challenges into efficient and elegant digital solutions. With a proven track record in project management and problem-solving,
-        she actively leverages cutting-edge technologies to enhance efficiency. 
-        She is currently seeking challenging roles to apply and develop her expertise at the intersection of Informatics and innovation.
+        <p>Cindy Alfira is a highly results-oriented student in the Informatics Engineering program at Universitas Airlangga's Vocational Faculty. She joined through the SNBP pathway, where Informatics was her second choice, but she's grateful for the opportunity to pursue her passion in technology.</p>
+        <p>With hands-on experience in various tools and technologies, she brings creative ideas to life. Her skill set includes UI/UX design, HTML, Java, Python, and more. She's constantly learning and expanding her knowledge to stay updated with the latest industry trends.</p>
+        <div style={{ marginTop: '2rem' }}>
+          <h3 style={{ marginBottom: '1rem', color: '#007bff' }}>Academic Journey</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
+            <span style={{ backgroundColor: '#e3f2fd', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#1976d2' }}>Major: Informatics Engineering</span>
+          </div>
+        </div>
+        <div style={{ marginTop: '1rem' }}>
+          <h3 style={{ marginBottom: '1rem', color: '#007bff' }}>Interests & Passions</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <span style={{ backgroundColor: '#e8f5e8', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#2e7d32' }}>Design</span>
+            <span style={{ backgroundColor: '#fff3e0', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#ef6c00' }}>Photography</span>
+            <span style={{ backgroundColor: '#f3e5f5', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#7b1fa2' }}>Gaming</span>
+            <span style={{ backgroundColor: '#e0f2f1', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#00695c' }}>Technology Trends</span>
+          </div>
+        </div>
+        <div style={{ marginTop: '1rem' }}>
+          <h3 style={{ marginBottom: '1rem', color: '#007bff' }}>Future Goals</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <span style={{ backgroundColor: '#f1f8e9', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#558b2f' }}>Transform Technical Challenges</span>
+            <span style={{ backgroundColor: '#fce4ec', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#c2185b' }}>Seek Innovative Roles</span>
+            <span style={{ backgroundColor: '#e1f5fe', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#0277bd' }}>Develop Expertise in Informatics</span>
+          </div>
+        </div>
+        <div style={{ marginTop: '1rem' }}>
+          <h3 style={{ marginBottom: '1rem', color: '#007bff' }}>Reflections</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <span style={{ backgroundColor: '#fff8e1', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#f57c00' }}>Overcoming Coding Hurdles</span>
+            <span style={{ backgroundColor: '#e8eaf6', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#3f51b5' }}>Launching First Web App</span>
+            <span style={{ backgroundColor: '#f1f8e9', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#558b2f' }}>Supportive Unair Community</span>
+            <span style={{ backgroundColor: '#e3f2fd', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', color: '#1976d2' }}>Fueling Love for Tech</span>
+          </div>
+          <p style={{ marginTop: '1rem', marginBottom: '1rem', fontStyle: 'italic', color: '#666' }}>My learning journey at university has been filled with exciting challenges and highlights, shaping my problem-solving skills and pushing me to innovate and grow.</p>
+        </div>
       </>
     ),
   },
@@ -137,17 +168,17 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "Airlagga University",
+        name: "Airlangga University",
         description: <>Informatics engineering student.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills & Technologies",
     skills: [
       {
-        title: "Figma",
+        title: "UI/UX Design",
         description: (
           <>Able to prototype in Figma with Once UI with unnatural speed.</>
         ),
@@ -174,22 +205,18 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Web Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building next gen apps with HTML, CSS, JavaScript, and responsive design.</>
         ),
         tags: [
           {
+            name: "HTML & CSS",
+            icon: "html",
+          },
+          {
             name: "JavaScript",
             icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -201,7 +228,51 @@ const about: About = {
             height: 9,
           },
         ],
-      },  
+      },
+      {
+        title: "Programming",
+        description: (
+          <>Developing solutions with Java, Python, PHP, Dart, and Golang for various applications.</>
+        ),
+        tags: [
+          {
+            name: "Java",
+            icon: "java",
+          },
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "PHP",
+            icon: "php",
+          },
+          {
+            name: "Dart",
+            icon: "dart",
+          },
+          {
+            name: "Golang",
+            icon: "go",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Problem Solving",
+        description: (
+          <>Applying logical thinking to tackle real-world challenges.</>
+        ),
+        tags: [
+          {
+            name: "Problem Solving",
+            icon: "code",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
     ],
   },
 };
@@ -217,59 +288,65 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  label: "Projects / Works",
+  title: `Projects & Works ${person.name}`,
+  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
+  description: `Visual showcase of projects done while at Universitas Airlangga`,
+  // Create new project pages by adding a new .mdx file to app/work/projects (adjust path as needed)
+  // Example projects based on provided details: Add 3-5 .mdx files with title, short description, images, optional videos/slideshow/Gdrive links
   // All projects will be listed on the /home and /work routes
+  // 1. Portfolio Website: A personal portfolio website showcasing my journey, skills, and projects as an Informatics Engineering student. Built with Next.js, designed with a nature-inspired theme featuring smooth animations and responsive design. Tags: Next.js, HTML/CSS, JavaScript, Web Design. Images: ["/images/projects/portfolio-1.jpg"]. Link: "/work/portfolio-website"
+  // 2. MedHug Application: A medication ordering application for easy prescription management and delivery. Built with Dart for cross-platform mobile development. UI/UX prototyped in Figma. Tags: Mobile App, Dart, UI/UX. Images: ["/images/projects/medhug-1.jpg", "/images/projects/medhug-2.jpg"]. Figma Link: "https://www.figma.com/design/2mBFTT1sTIzz0lRR703rWS/MedHug----Project-UI-UX?node-id=88-2205&t=SLK33GkZPth6YTjt-1". Link: "/work/medhug-application"
+  // Note: Ensure to create corresponding MDX files for each project with embedded images/videos as needed.
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Photos & Collages ${person.name}`,
+  // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
+  description: `A collection of photos and collages showcasing my journey`,
   // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  // These are placeholder images, replace with your own photos/collages
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      alt: "Travel adventure collage",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      alt: "University project photo",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      alt: "Music hobby snapshot",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      alt: "Personal achievement collage",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      alt: "Team collaboration photo",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      alt: "Innovation workshop",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      alt: "Design inspiration board",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
+      alt: "Coding session",
       orientation: "vertical",
     },
   ],
